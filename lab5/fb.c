@@ -2,7 +2,7 @@
 #include <string.h>
 
 void find_combinations(int score, int current_score, char* path, int current_play) {
-    int plays[] = {8, 7, 6, 3, 2};  // Corresponding point values for TD+2pt, TD+FG, Touchdown, 3pt FG, and Safety
+    int plays[] = {8, 7, 6, 3, 2};  
     char play_names[][20] = {"TD + 2pt", "TD + FG", "TD", "3pt + FG", "Safety"};
     
     if (score == current_score) {
