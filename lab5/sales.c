@@ -4,7 +4,7 @@
 
 #define NUM_MONTHS 12
 
-// Define a structure to hold sales values and months
+
 struct SalesData {
     char month[10];
     double sales;
@@ -73,7 +73,7 @@ void generateMovingAverageReport(double sales[NUM_MONTHS]) {
     }
 }
 
-// Comparison function for qsort
+
 int compareSales(const void *a, const void *b) {
     return ((struct SalesData *)b)->sales - ((struct SalesData *)a)->sales;
 }
@@ -84,7 +84,7 @@ void generateHighestToLowestReport(double sales[NUM_MONTHS]){
         "July", "August", "September", "October", "November", "December"
     };
 
-    // Create an array of SalesData structures to associate each sales value with its corresponding month
+
     struct SalesData salesData[NUM_MONTHS];
     for (int i = 0; i < NUM_MONTHS; i++) {
         strcpy(salesData[i].month, months[i]);
@@ -92,7 +92,7 @@ void generateHighestToLowestReport(double sales[NUM_MONTHS]){
     }
     qsort(salesData, NUM_MONTHS, sizeof(struct SalesData), compareSales);
 
-    // Print the sorted data with the corresponding months
+    
     printf("\nSales Report (Highest to Lowest):\n");
     printf("Month      \tSales\n");
     for (int i = 0; i < NUM_MONTHS; i++) {
