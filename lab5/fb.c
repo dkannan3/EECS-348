@@ -24,9 +24,10 @@ void find_combinations(int score, int current_score, char* path, int current_pla
 }
 
 int main() {
-    int score = 25;
+    int score;
     printf("Enter the NFL score: %d\n", score);
-
+    scanf("%d", &score);
+    
     printf("Possible combinations of scoring plays:\n");
     char path[100] = "";
     find_combinations(score, 0, path, 0);
