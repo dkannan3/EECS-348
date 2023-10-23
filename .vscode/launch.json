@@ -1,18 +1,26 @@
 {
-    "configurations": [
-        {
-            "name": "C/C++: gcc build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++: gcc build active file"
-        }
-    ],
-    "version": "2.0.0"
+  "configurations": [
+    {
+      "name": "C/C++: gcc build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: gcc build active file"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/divitkannan/EECS-348",
+      "program": "/Users/divitkannan/EECS-348/build/Debug/outDebug"
+    }
+  ],
+  "version": "2.0.0"
 }
