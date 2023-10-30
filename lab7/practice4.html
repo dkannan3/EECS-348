@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+
+<form method="post">
+    Enter a number: <input type="text" name="number">
+    <input type="submit" value="Generate Table">
+</form>
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $number = $_POST["number"];
+    
+    if (is_numeric($number)) {
+        echo "<h2>Multiplication Table for $number</h2>";
+        echo "<table border='1'>";
+        
+        // Print the table headers
+        echo "<tr><th></th>";
+        for ($i = 1; $i <= $number; $i++) {
+            echo "<th>$i</th>";
+        }
+        echo "</tr>";
+        
+        // Generate and print the multiplication table
+        for ($row = 1; $row <= $number; $row++) {
+            echo "<tr><th>$row</th>";
+            for ($col = 1; $col <= $number; $col++) {
+                $result = $row * $col;
+                echo "<td>$result</td>";
+            }
+            echo "</tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "Please enter a valid number.";
+    }
+}
+?>
+
+</body>
+</html>
+

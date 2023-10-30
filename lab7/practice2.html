@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practice 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #custom-text {
+            margin-bottom: 20px;
+        }
+
+        #custom-paragraph {
+            padding: 20px;
+            margin: 0 auto;
+            border-style: solid;
+        }
+    </style>
+    <script>
+        function applyCustomization() {
+            var borderRed = document.getElementById('border-red').value;
+            var borderGreen = document.getElementById('border-green').value;
+            var borderBlue = document.getElementById('border-blue').value;
+
+            var borderWidth = document.getElementById('border-width').value;
+
+            var backgroundRed = document.getElementById('background-red').value;
+            var backgroundGreen = document.getElementById('background-green').value;
+            var backgroundBlue = document.getElementById('background-blue').value;
+
+            var customParagraph = document.getElementById('custom-paragraph');
+
+            customParagraph.style.borderColor = 'rgb(' + borderRed + ',' + borderGreen + ',' + borderBlue + ')';
+            customParagraph.style.borderWidth = borderWidth + 'px';
+            customParagraph.style.backgroundColor = 'rgb(' + backgroundRed + ',' + backgroundGreen + ',' + backgroundBlue + ')';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="custom-text">
+        <p>Enter RGB values to customize the paragraph border color and background color, along with the border width:</p>
+        <label>Border R(0-255): </label>
+        <input type="number" id="border-red" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <label>Border G(0-255): </label>
+        <input type="number" id="border-green" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <label>Border B(0-255): </label>
+        <input type="number" id="border-blue" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <label>Border Width: </label>
+        <input type="number" id="border-width" placeholder="0" min="0" required>
+        <br><br>
+        <label>Background R(0-255): </label>
+        <input type="number" id="background-red" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <label>Background G(0-255): </label>
+        <input type="number" id="background-green" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <label>Background B(0-255): </label>
+        <input type="number" id="background-blue" placeholder="0" min="0" max="255" required>
+        <br><br>
+        <button onclick="applyCustomization()">Apply Changes</button>
+    </div>
+    <div id="custom-paragraph">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+</body>
+
+</html>
