@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <title>Practice 3</title>
+    <script>
+        function checkPassword() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+
+            if (password1.length < 8 || password1 !== password2) {
+                alert("Passwords do not match or are less than eight characters long. Please try again.");
+            } else {
+                alert("Passwords matched!");
+            }
+        }
+    </script>
+
+    <h2>Enter Your Password</h2>
+    <label for="password1">Password:</label>
+    <input type="password" id="password1" name="password1"><br><br>
+    <label for="password2">Confirm Password:</label>
+    <input type="password" id="password2" name="password2"><br><br>
+    <button onclick="checkPassword()">Submit</button>
+
+</body>
+
+</html>
